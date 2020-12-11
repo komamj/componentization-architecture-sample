@@ -4,8 +4,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath(Dependencies.ANDROID_GRADLE_PLUGIN)
-        classpath(Dependencies.Kotlin.GRADLE_PLUGIN)
+        classpath(Dependencies.Plugin.ANDROID_GRADLE_PLUGIN)
+        classpath(Dependencies.Plugin.KOTLIN_GRADLE_PLUGIN)
     }
 }
 
