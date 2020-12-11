@@ -1,12 +1,14 @@
 object Dependencies {
-    const val ANDROID_GRADLE_PLUGIN =
-        "com.android.tools.build:gradle:${Versions.ANDROID_GRADLE_PLUGIN}"
+    object Plugin {
+        const val ANDROID_GRADLE_PLUGIN =
+            "com.android.tools.build:gradle:${Versions.ANDROID_GRADLE_PLUGIN}"
+        const val KOTLIN_GRADLE_PLUGIN =
+            "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.Kotlin.KOTLIN}"
+        const val AROUTER_PLUGIN = ""
+    }
 
     object Kotlin {
-        const val GRADLE_PLUGIN =
-            "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.Kotlin.KOTLIN}"
         const val STDLIB = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.Kotlin.KOTLIN}"
-
         const val COROUTINES_CORE =
             "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.Kotlin.COROUTINES}"
         const val COROUTINES_ANDROID =
