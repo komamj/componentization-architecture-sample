@@ -28,6 +28,7 @@ object Versions {
 
     object Others {
         const val TIMBER = "4.7.1"
+        const val ROUTER_COMPILER = ""
         const val GSON = "2.8.6"
         const val GLIDE = "4.9.0"
         const val RETROFIT = "2.9.0"
