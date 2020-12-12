@@ -1,5 +1,10 @@
 object Versions {
-    const val ANDROID_GRADLE_PLUGIN = "4.1.1"
+    object Plugin {
+        const val ANDROID_GRADLE_PLUGIN = "4.1.1"
+        const val KOTLIN = "1.4.21"
+        const val HILT = "2.28.3-alpha"
+        const val ROUTER = "1.0.2"
+    }
 
     object Kotlin {
         const val KOTLIN = "1.4.21"
@@ -28,6 +33,8 @@ object Versions {
 
     object Others {
         const val TIMBER = "4.7.1"
+        const val ROUTER = "1.5.1"
+        const val ROUTER_COMPILER = "1.2.2"
         const val GSON = "2.8.6"
         const val GLIDE = "4.9.0"
         const val RETROFIT = "2.9.0"
