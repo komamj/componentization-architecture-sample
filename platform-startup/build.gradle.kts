@@ -1,6 +1,17 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    id("com.diffplug.gradle.spotless") version "4.1.0"
+}
+
+spotless {
+    kotlin {
+        target("**/*.kt")
+        ktlint().userData(
+            mapOf("max_line_length" to "120")
+        )
+        licenseHeaderFile(rootProject.file("copyright.kt"))
+    }
 }
 
 android {
@@ -47,7 +58,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "consumer-rules.pro"
             )
         }
     }
