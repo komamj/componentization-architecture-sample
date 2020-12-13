@@ -1,0 +1,95 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.komamj",
+    "module": "common-configuration",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.5",
+      "buildId": "n2l6u72wrvhapizphjd5lttnga"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "common-configuration-0.0.1.jar",
+          "url": "common-configuration-0.0.1.jar",
+          "size": 41516,
+          "sha512": "a368f8db9cb4155dbd9ca6f7e594e462f6ee31387d9ec2ed2ae96da596e4913aa81aa585430fc39a9697b2acabad87aae74b34bcb71843929bb49011dabc5d0d",
+          "sha256": "ca428954dd211efb3e10c6c158592e5ea5a1ce8b02f978aa886b8eda0de2b68e",
+          "sha1": "8a46b8b4be5ed6e06fbda0aea08d96ab9aaa5420",
+          "md5": "c4aa99efe86dd1075f864c2a52a73276"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "4.1.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-gradle-plugin",
+          "version": {
+            "requires": "1.4.21"
+          }
+        },
+        {
+          "group": "com.diffplug.spotless",
+          "module": "spotless-plugin-gradle",
+          "version": {
+            "requires": "4.1.0"
+          }
+        },
+        {
+          "group": "org.jacoco",
+          "module": "org.jacoco.core",
+          "version": {
+            "requires": "0.8.5"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "common-configuration-0.0.1.jar",
+          "url": "common-configuration-0.0.1.jar",
+          "size": 41516,
+          "sha512": "a368f8db9cb4155dbd9ca6f7e594e462f6ee31387d9ec2ed2ae96da596e4913aa81aa585430fc39a9697b2acabad87aae74b34bcb71843929bb49011dabc5d0d",
+          "sha256": "ca428954dd211efb3e10c6c158592e5ea5a1ce8b02f978aa886b8eda0de2b68e",
+          "sha1": "8a46b8b4be5ed6e06fbda0aea08d96ab9aaa5420",
+          "md5": "c4aa99efe86dd1075f864c2a52a73276"
+        }
+      ]
+    }
+  ]
+}

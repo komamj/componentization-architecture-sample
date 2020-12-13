@@ -1,10 +1,19 @@
+package com.github.komamj
+
 object Versions {
+    object Android {
+        const val COMPILE_SDK_VERSION = 30
+        const val BUILD_TOOLS_VERSION = "30.0.2"
+        const val MIN_SDK_VERSION = 23
+        const val TARGET_SDK_VERSION = 30
+        const val JVM_TARGET = "1.8"
+    }
+
     object Plugin {
         const val ANDROID_GRADLE_PLUGIN = "4.1.1"
         const val KOTLIN = "1.4.21"
         const val HILT = "2.28.3-alpha"
         const val ROUTER = "1.0.2"
-        const val BINTRAY = "1.8.5"
     }
 
     object Kotlin {

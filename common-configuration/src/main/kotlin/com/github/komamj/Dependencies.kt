@@ -1,14 +1,14 @@
+package com.github.komamj
+
 object Dependencies {
     object Plugin {
-        const val ANDROID =
+        const val ANDROID_GRADLE_PLUGIN =
             "com.android.tools.build:gradle:${Versions.Plugin.ANDROID_GRADLE_PLUGIN}"
-        const val KOTLIN =
+        const val KOTLIN_GRADLE_PLUGIN =
             "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.Plugin.KOTLIN}"
-        const val HILT =
+        const val HILT_GRADLE_PLUGIN =
             "com.google.dagger:hilt-android-gradle-plugin:${Versions.Plugin.HILT}"
-        const val AROUTER = "com.alibaba:arouter-register:${Versions.Plugin.ROUTER}"
-        const val BINTRAY =
-            "com.jfrog.bintray.gradle:gradle-bintray-plugin:${Versions.Plugin.BINTRAY}"
+        const val AROUTER_PLUGIN = "com.alibaba:arouter-register:${Versions.Plugin.ROUTER}"
     }
 
     object Kotlin {
