@@ -1,12 +1,14 @@
 object Dependencies {
     object Plugin {
-        const val ANDROID_GRADLE_PLUGIN =
+        const val ANDROID =
             "com.android.tools.build:gradle:${Versions.Plugin.ANDROID_GRADLE_PLUGIN}"
-        const val KOTLIN_GRADLE_PLUGIN =
+        const val KOTLIN =
             "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.Plugin.KOTLIN}"
-        const val HILT_GRADLE_PLUGIN =
+        const val HILT =
             "com.google.dagger:hilt-android-gradle-plugin:${Versions.Plugin.HILT}"
-        const val AROUTER_PLUGIN = "com.alibaba:arouter-register:${Versions.Plugin.ROUTER}"
+        const val AROUTER = "com.alibaba:arouter-register:${Versions.Plugin.ROUTER}"
+        const val BINTRAY =
+            "com.jfrog.bintray.gradle:gradle-bintray-plugin:${Versions.Plugin.BINTRAY}"
     }
 
     object Kotlin {
