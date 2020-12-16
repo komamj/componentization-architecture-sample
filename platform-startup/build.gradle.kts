@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    id("maven-publish")
 }
 
 android {
@@ -64,4 +65,17 @@ dependencies {
     androidTestImplementation(Dependencies.JunitTest.MOCK_CORE)
     androidTestImplementation(Dependencies.JunitTest.TRUTH)
     androidTestImplementation(Dependencies.AndroidTest.ESPRESSO_CORE)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components.findByName("release"))
+                groupId = "com.github.komamj"
+                artifactId = "startup"
+                version = "0.0.1"
+            }
+        }
+    }
 }
