@@ -85,6 +85,7 @@ object Dependencies {
     object JunitTest {
         const val JUNIT = "junit:junit:${Versions.JunitTest.JUNIT}"
         const val TRUTH = "com.google.truth:truth:${Versions.JunitTest.TRUTH}"
+        const val MOCK_CORE = "org.mockito:mockito-core:${Versions.JunitTest.MOCKITO_CORE}"
         const val LIFECYCLE = "androidx.arch.core:core-testing:${Versions.JunitTest.LIFECYCLE}"
     }
 
