@@ -26,7 +26,7 @@ object Dependencies {
         const val ANNOTATION = "androidx.annotation:annotation:${Versions.AndroidX.ANNOTATION}"
         const val MULTIDEX = "androidx.multidex:multidex:${Versions.AndroidX.MULTIDEX}"
         const val LIFECYCLE =
-            "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.AndroidX.MULTIDEX}"
+            "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.AndroidX.LIFECYCLE}"
         const val LIFECYCLE_COMMON_JAVA8 =
             "androidx.lifecycle:lifecycle-common-java8:${Versions.AndroidX.LIFECYCLE}"
         const val LIFECYCLE_LIVE_DATA =
