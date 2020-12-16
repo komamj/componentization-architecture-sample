@@ -1,3 +1,5 @@
+import util.addLifecycle
+
 plugins {
     id("com.android.library")
     kotlin("android")
@@ -14,6 +16,8 @@ kapt {
         arg("AROUTER_GENERATE_DOC", "enable")
     }
 }
+
+addLifecycle()
 
 android {
     compileSdkVersion(30)
