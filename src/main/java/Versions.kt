@@ -4,6 +4,7 @@ object Versions {
         const val KOTLIN = "1.4.21"
         const val HILT = "2.28.3-alpha"
         const val ROUTER = "1.0.2"
+        const val BINTRAY = "1.8.5"
     }
 
     object Kotlin {
