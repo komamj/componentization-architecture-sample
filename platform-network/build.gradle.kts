@@ -60,6 +60,7 @@ dependencies {
     implementation(Dependencies.Others.HILT_ANDROID)
     kapt(Dependencies.Others.HILT_COMPILER)
     api(Dependencies.Others.RETROFIT)
+    implementation(Dependencies.Others.GSON)
     implementation(Dependencies.Others.CONVERTER_GSON)
     implementation(Dependencies.Others.OKHTTP_LOGGING_INTERCEPTOR)
 
