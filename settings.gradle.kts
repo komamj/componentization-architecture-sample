@@ -1,3 +1,4 @@
+include(":platform-image")
 include(":platform-storage")
 include(":platform-router")
 include(":platform-network")

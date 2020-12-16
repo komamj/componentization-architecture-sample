@@ -69,6 +69,8 @@ object Dependencies {
         const val TIMBER = "com.jakewharton.timber:timber:${Versions.Others.TIMBER}"
         const val GLIDE = "com.github.bumptech.glide:glide:${Versions.Others.GLIDE}"
         const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:${Versions.Others.GLIDE}"
+        const val GLIDE_OKHTTP_INTEGRATION =
+            "com.github.bumptech.glide:okhttp3-integration:${Versions.Others.GLIDE}"
         const val GSON = "com.google.code.gson:gson:${Versions.Others.GSON}"
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.Others.RETROFIT}"
         const val CONVERTER_GSON =
