@@ -57,7 +57,7 @@ android {
 dependencies {
     implementation(Dependencies.Kotlin.STDLIB)
 
-    api(Dependencies.AndroidX.STARTUP)
+    api(Dependencies.Others.TIMBER)
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)
@@ -73,7 +73,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components.findByName("release"))
                 groupId = "com.github.komamj"
-                artifactId = "platform-startup"
+                artifactId = "platform-log"
                 version = "0.0.1"
             }
         }

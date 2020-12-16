@@ -1,7 +1,7 @@
-include(":platform-startup")
-include(":platform-log")
-include(":platform-network")
-include(":platform-router")
 include(":platform-storage")
+include(":platform-router")
+include(":platform-network")
+include(":platform-log")
+include(":platform-startup")
 include(":app")
 rootProject.name = "Componentization Architecture Sample"

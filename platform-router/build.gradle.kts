@@ -1,7 +1,18 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
+    id("com.alibaba.arouter")
     id("maven-publish")
+}
+
+kapt {
+    correctErrorTypes = true
+    useBuildCache = true
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.name)
+        arg("AROUTER_GENERATE_DOC", "enable")
+    }
 }
 
 android {
@@ -56,8 +67,12 @@ android {
 
 dependencies {
     implementation(Dependencies.Kotlin.STDLIB)
+    implementation(Dependencies.AndroidX.APPCOMPAT)
+    implementation(Dependencies.Others.GSON)
+    api(Dependencies.Others.ROUTER)
+    kapt(Dependencies.Others.ROUTER_COMPILER)
 
-    api(Dependencies.AndroidX.STARTUP)
+    implementation(project(path = ":platform-log"))
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)
@@ -73,7 +88,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components.findByName("release"))
                 groupId = "com.github.komamj"
-                artifactId = "platform-startup"
+                artifactId = "platform-router"
                 version = "0.0.1"
             }
         }

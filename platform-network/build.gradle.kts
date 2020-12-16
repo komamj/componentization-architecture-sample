@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
     id("maven-publish")
 }
 
@@ -56,8 +57,11 @@ android {
 
 dependencies {
     implementation(Dependencies.Kotlin.STDLIB)
-
-    api(Dependencies.AndroidX.STARTUP)
+    implementation(Dependencies.Others.HILT_ANDROID)
+    kapt(Dependencies.Others.HILT_COMPILER)
+    api(Dependencies.Others.RETROFIT)
+    implementation(Dependencies.Others.CONVERTER_GSON)
+    implementation(Dependencies.Others.OKHTTP_LOGGING_INTERCEPTOR)
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)
@@ -73,7 +77,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components.findByName("release"))
                 groupId = "com.github.komamj"
-                artifactId = "platform-startup"
+                artifactId = "platform-network"
                 version = "0.0.1"
             }
         }
