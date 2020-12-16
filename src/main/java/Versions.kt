@@ -41,7 +41,7 @@ object Versions {
         const val RETROFIT = "2.9.0"
         const val OKHTTP = "4.7.2"
         const val OKHTTP_LOGGING_INTERCEPTOR = "4.7.2"
-        const val OKIO = ""
+        const val OKIO = "2.9.0"
         const val LOTTIE = "3.4.1"
         const val HILT = "2.28.3-alpha"
     }
