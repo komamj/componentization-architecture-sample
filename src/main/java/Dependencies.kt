@@ -40,7 +40,7 @@ object Dependencies {
         const val LIFECYCLE_PROCESS =
             "androidx.lifecycle:lifecycle-process:${Versions.AndroidX.LIFECYCLE}"
         const val FRAGMENT = "androidx.fragment:fragment-ktx:${Versions.AndroidX.FRAGMENT}"
-        const val APPCOMPAT = "androidx.appcompat:appcompat${Versions.AndroidX.APPCOMPAT}"
+        const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.AndroidX.APPCOMPAT}"
         const val CONSTRAINT_LAYOUT =
             "androidx.constraintlayout:constraintlayout:${Versions.AndroidX.CONSTRAINT_LAYOUT}"
         const val MATERIAL = "com.google.android.material:material:${Versions.AndroidX.MATERIAL}"
