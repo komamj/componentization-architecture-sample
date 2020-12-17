@@ -52,8 +52,9 @@ android {
 
 dependencies {
     implementation(Dependencies.Kotlin.STDLIB)
-
-    api(Dependencies.AndroidX.DATASTORE_PREFERENCES)
+    implementation(Dependencies.AndroidX.APPCOMPAT)
+    implementation(Dependencies.Others.PERMISSION)
+    implementation(project(":platform-log"))
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)
@@ -69,7 +70,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components.findByName("release"))
                 groupId = "com.github.komamj"
-                artifactId = "platform-storage"
+                artifactId = "platform-permission"
                 version = "0.0.1"
             }
         }

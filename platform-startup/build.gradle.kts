@@ -33,10 +33,6 @@ android {
         }
     }
 
-    buildFeatures {
-        dataBinding = true
-    }
-
     buildTypes {
         getByName("debug") {
             isMinifyEnabled = false

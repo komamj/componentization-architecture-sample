@@ -63,6 +63,7 @@ object Dependencies {
     }
 
     object Others {
+        const val PERMISSION = "pub.devrel:easypermissions:${Versions.Others.PERMISSION}"
         const val ROUTER = "com.alibaba:arouter-api:${Versions.Others.ROUTER}"
         const val ROUTER_COMPILER =
             "com.alibaba:arouter-compiler:${Versions.Others.ROUTER_COMPILER}"
