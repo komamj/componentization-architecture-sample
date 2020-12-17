@@ -26,7 +26,7 @@ object Dependencies {
         const val ANNOTATION = "androidx.annotation:annotation:${Versions.AndroidX.ANNOTATION}"
         const val MULTIDEX = "androidx.multidex:multidex:${Versions.AndroidX.MULTIDEX}"
         const val LIFECYCLE =
-            "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.AndroidX.MULTIDEX}"
+            "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.AndroidX.LIFECYCLE}"
         const val LIFECYCLE_COMMON_JAVA8 =
             "androidx.lifecycle:lifecycle-common-java8:${Versions.AndroidX.LIFECYCLE}"
         const val LIFECYCLE_LIVE_DATA =
@@ -63,12 +63,15 @@ object Dependencies {
     }
 
     object Others {
+        const val PERMISSION = "pub.devrel:easypermissions:${Versions.Others.PERMISSION}"
         const val ROUTER = "com.alibaba:arouter-api:${Versions.Others.ROUTER}"
         const val ROUTER_COMPILER =
             "com.alibaba:arouter-compiler:${Versions.Others.ROUTER_COMPILER}"
         const val TIMBER = "com.jakewharton.timber:timber:${Versions.Others.TIMBER}"
         const val GLIDE = "com.github.bumptech.glide:glide:${Versions.Others.GLIDE}"
         const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:${Versions.Others.GLIDE}"
+        const val GLIDE_OKHTTP_INTEGRATION =
+            "com.github.bumptech.glide:okhttp3-integration:${Versions.Others.GLIDE}"
         const val GSON = "com.google.code.gson:gson:${Versions.Others.GSON}"
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.Others.RETROFIT}"
         const val CONVERTER_GSON =

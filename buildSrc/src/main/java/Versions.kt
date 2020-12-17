@@ -33,6 +33,7 @@ object Versions {
     }
 
     object Others {
+        const val PERMISSION = "3.0.0"
         const val TIMBER = "4.7.1"
         const val ROUTER = "1.5.1"
         const val ROUTER_COMPILER = "1.2.2"
