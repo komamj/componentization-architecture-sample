@@ -7,10 +7,10 @@ buildscript {
         }
     }
     dependencies {
-        classpath(Dependencies.Plugin.ANDROID)
-        classpath(Dependencies.Plugin.KOTLIN)
-        classpath(Dependencies.Plugin.AROUTER)
-        classpath(Dependencies.Plugin.HILT)
+        classpath("com.android.tools.build:gradle:4.1.1")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21")
+        classpath("com.alibaba:arouter-register:1.0.2")
+        classpath("com.google.dagger:hilt-android-gradle-plugin:2.28.3-alpha")
         classpath("com.github.komamj:common-configuration:0.0.1")
     }
 }

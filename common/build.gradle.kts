@@ -1,11 +1,11 @@
 import com.github.komamj.util.addLifecycle
+import com.github.komamj.dependency.Dependencies
 
 plugins {
     id("com.android.library")
     kotlin("android")
     kotlin("kapt")
     id("com.github.komamj.common-configuration")
-    id("maven-publish")
 }
 
 android {
