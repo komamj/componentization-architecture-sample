@@ -1,3 +1,4 @@
+include(":common")
 include(":platform-permission")
 include(":platform-image")
 include(":platform-storage")
