@@ -23,12 +23,10 @@ import androidx.databinding.BindingAdapter
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.github.komamj.image.GlideApp
 
-private const val IMAGE_URL = "http://image.tmdb.org/t/p/w342"
-
 @BindingAdapter(value = ["imageUrl"])
-fun bindImageUrl(view: ImageView, imageUrl: String?) {
+fun bindImageUrl(view: ImageView, url: String?) {
     GlideApp.with(view.context)
-        .load("$IMAGE_URL$imageUrl")
+        .load(url)
         .placeholder(ColorDrawable(Color.GRAY))
         .transition(DrawableTransitionOptions.withCrossFade())
         .thumbnail(0.1f)
