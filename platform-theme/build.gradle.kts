@@ -3,7 +3,6 @@ import com.github.komamj.dependency.Dependencies
 plugins {
     id("com.android.library")
     kotlin("android")
-    kotlin("kapt")
     id("com.github.komamj.common-configuration")
 }
 
@@ -12,17 +11,10 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
-
-    buildFeatures.dataBinding = true
 }
 
 dependencies {
-    api(Dependencies.Others.GLIDE)
-    kapt(Dependencies.Others.GLIDE_COMPILER)
-    implementation(Dependencies.Others.GLIDE_OKHTTP_INTEGRATION) {
-        isTransitive = false
-    }
-    implementation(Dependencies.Others.OKHTTP)
+    api(Dependencies.AndroidX.MATERIAL)
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)

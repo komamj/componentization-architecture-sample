@@ -1,3 +1,4 @@
+include(":platform-theme")
 include(":platform-database")
 include(":common")
 include(":platform-permission")
