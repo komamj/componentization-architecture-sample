@@ -14,7 +14,6 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.Kotlin.STDLIB)
     implementation(Dependencies.AndroidX.APPCOMPAT)
     implementation(Dependencies.Others.PERMISSION)
     implementation(project(":platform-log"))

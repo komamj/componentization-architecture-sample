@@ -15,7 +15,6 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.Kotlin.STDLIB)
     implementation(Dependencies.Others.HILT_ANDROID)
     kapt(Dependencies.Others.HILT_COMPILER)
     api(Dependencies.Others.RETROFIT)

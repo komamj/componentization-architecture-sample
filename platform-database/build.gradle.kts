@@ -1,3 +1,4 @@
+import com.github.komamj.util.addLifecycle
 import com.github.komamj.dependency.Dependencies
 
 plugins {
@@ -5,16 +6,6 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     id("com.github.komamj.common-configuration")
-    id("com.alibaba.arouter")
-}
-
-kapt {
-    correctErrorTypes = true
-    useBuildCache = true
-    arguments {
-        arg("AROUTER_MODULE_NAME", project.name)
-        arg("AROUTER_GENERATE_DOC", "enable")
-    }
 }
 
 android {
@@ -22,15 +13,24 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
+
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
-dependencies {
-    implementation(Dependencies.AndroidX.APPCOMPAT)
-    implementation(Dependencies.Others.GSON)
-    api(Dependencies.Others.ROUTER)
-    kapt(Dependencies.Others.ROUTER_COMPILER)
+addLifecycle(configurationName = "api")
 
-    implementation(project(path = ":platform-log"))
+dependencies {
+    api(Dependencies.AndroidX.ROOM_RUNTIME)
+    api(Dependencies.AndroidX.ROOM_KTX)
+    kapt(Dependencies.AndroidX.ROOM_COMPILER)
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)

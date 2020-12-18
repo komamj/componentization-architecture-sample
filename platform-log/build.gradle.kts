@@ -14,8 +14,6 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.Kotlin.STDLIB)
-
     api(Dependencies.Others.TIMBER)
 
     testImplementation(Dependencies.JunitTest.JUNIT)

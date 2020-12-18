@@ -28,7 +28,6 @@ android {
 addLifecycle(configurationName = "api")
 
 dependencies {
-    implementation(Dependencies.Kotlin.STDLIB)
     implementation(Dependencies.AndroidX.APPCOMPAT)
     api(project(":platform-image"))
     api(project(":platform-log"))

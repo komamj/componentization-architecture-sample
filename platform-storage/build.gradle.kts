@@ -14,8 +14,6 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.Kotlin.STDLIB)
-
     api(Dependencies.AndroidX.DATASTORE_PREFERENCES)
 
     testImplementation(Dependencies.JunitTest.JUNIT)

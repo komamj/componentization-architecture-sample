@@ -15,7 +15,6 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.Kotlin.STDLIB)
     api(Dependencies.Others.GLIDE)
     kapt(Dependencies.Others.GLIDE_COMPILER)
     implementation(Dependencies.Others.GLIDE_OKHTTP_INTEGRATION) {

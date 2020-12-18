@@ -14,8 +14,6 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.Kotlin.STDLIB)
-
     api(Dependencies.AndroidX.STARTUP)
 
     testImplementation(Dependencies.JunitTest.JUNIT)
