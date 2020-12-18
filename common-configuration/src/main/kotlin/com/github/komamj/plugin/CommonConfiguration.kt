@@ -19,8 +19,8 @@ package com.github.komamj.plugin
 import com.android.build.gradle.*
 import com.diffplug.gradle.spotless.SpotlessExtension
 import com.github.komamj.Configuration
-import com.github.komamj.Dependencies
-import com.github.komamj.Versions
+import com.github.komamj.dependency.Dependencies
+import com.github.komamj.dependency.Versions
 import com.github.komamj.util.LICENCE_HEADER
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
@@ -36,6 +36,7 @@ class CommonConfiguration : Plugin<Project> {
 
         project.plugins.apply(KOTLIN_ANDROID_PLUGIN)
         project.plugins.apply(SPOTLESS_PLUGIN)
+        project.plugins.apply("maven-publish")
 
         project.extensions.create(CUSTOM_CONFIGURATION, Configuration::class.java)
 

@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("com.github.komamj.common-configuration")
+    id("maven-publish")
 }
 
 android {

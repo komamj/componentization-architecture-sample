@@ -1,4 +1,4 @@
-package com.github.komamj
+package com.github.komamj.dependency
 
 object Versions {
     object Android {
@@ -14,6 +14,7 @@ object Versions {
         const val KOTLIN = "1.4.21"
         const val HILT = "2.28.3-alpha"
         const val ROUTER = "1.0.2"
+        const val BINTRAY = "1.8.5"
     }
 
     object Kotlin {
@@ -42,6 +43,7 @@ object Versions {
     }
 
     object Others {
+        const val PERMISSION = "3.0.0"
         const val TIMBER = "4.7.1"
         const val ROUTER = "1.5.1"
         const val ROUTER_COMPILER = "1.2.2"
@@ -50,7 +52,7 @@ object Versions {
         const val RETROFIT = "2.9.0"
         const val OKHTTP = "4.7.2"
         const val OKHTTP_LOGGING_INTERCEPTOR = "4.7.2"
-        const val OKIO = ""
+        const val OKIO = "2.9.0"
         const val LOTTIE = "3.4.1"
         const val HILT = "2.28.3-alpha"
     }

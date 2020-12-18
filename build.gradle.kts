@@ -3,7 +3,7 @@ buildscript {
         google()
         jcenter()
         maven {
-            setUrl("./repos")
+            setUrl("../repos")
         }
     }
     dependencies {
@@ -19,7 +19,7 @@ allprojects {
         google()
         jcenter()
         maven {
-            setUrl("./repos")
+            setUrl("../repos")
         }
     }
 }

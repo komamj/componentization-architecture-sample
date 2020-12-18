@@ -1,6 +1,6 @@
 package com.github.komamj.util
 
-import com.github.komamj.Dependencies
+import com.github.komamj.dependency.Dependencies
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 

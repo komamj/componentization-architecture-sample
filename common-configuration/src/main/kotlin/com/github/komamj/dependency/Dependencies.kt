@@ -1,14 +1,16 @@
-package com.github.komamj
+package com.github.komamj.dependency
 
 object Dependencies {
     object Plugin {
-        const val ANDROID_GRADLE_PLUGIN =
+        const val ANDROID =
             "com.android.tools.build:gradle:${Versions.Plugin.ANDROID_GRADLE_PLUGIN}"
-        const val KOTLIN_GRADLE_PLUGIN =
+        const val KOTLIN =
             "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.Plugin.KOTLIN}"
-        const val HILT_GRADLE_PLUGIN =
+        const val HILT =
             "com.google.dagger:hilt-android-gradle-plugin:${Versions.Plugin.HILT}"
-        const val AROUTER_PLUGIN = "com.alibaba:arouter-register:${Versions.Plugin.ROUTER}"
+        const val AROUTER = "com.alibaba:arouter-register:${Versions.Plugin.ROUTER}"
+        const val BINTRAY =
+            "com.jfrog.bintray.gradle:gradle-bintray-plugin:${Versions.Plugin.BINTRAY}"
     }
 
     object Kotlin {
@@ -26,7 +28,7 @@ object Dependencies {
         const val ANNOTATION = "androidx.annotation:annotation:${Versions.AndroidX.ANNOTATION}"
         const val MULTIDEX = "androidx.multidex:multidex:${Versions.AndroidX.MULTIDEX}"
         const val LIFECYCLE =
-            "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.AndroidX.MULTIDEX}"
+            "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.AndroidX.LIFECYCLE}"
         const val LIFECYCLE_COMMON_JAVA8 =
             "androidx.lifecycle:lifecycle-common-java8:${Versions.AndroidX.LIFECYCLE}"
         const val LIFECYCLE_LIVE_DATA =
@@ -40,7 +42,7 @@ object Dependencies {
         const val LIFECYCLE_PROCESS =
             "androidx.lifecycle:lifecycle-process:${Versions.AndroidX.LIFECYCLE}"
         const val FRAGMENT = "androidx.fragment:fragment-ktx:${Versions.AndroidX.FRAGMENT}"
-        const val APPCOMPAT = "androidx.appcompat:appcompat${Versions.AndroidX.APPCOMPAT}"
+        const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.AndroidX.APPCOMPAT}"
         const val CONSTRAINT_LAYOUT =
             "androidx.constraintlayout:constraintlayout:${Versions.AndroidX.CONSTRAINT_LAYOUT}"
         const val MATERIAL = "com.google.android.material:material:${Versions.AndroidX.MATERIAL}"
@@ -63,12 +65,15 @@ object Dependencies {
     }
 
     object Others {
+        const val PERMISSION = "pub.devrel:easypermissions:${Versions.Others.PERMISSION}"
         const val ROUTER = "com.alibaba:arouter-api:${Versions.Others.ROUTER}"
         const val ROUTER_COMPILER =
             "com.alibaba:arouter-compiler:${Versions.Others.ROUTER_COMPILER}"
         const val TIMBER = "com.jakewharton.timber:timber:${Versions.Others.TIMBER}"
         const val GLIDE = "com.github.bumptech.glide:glide:${Versions.Others.GLIDE}"
         const val GLIDE_COMPILER = "com.github.bumptech.glide:compiler:${Versions.Others.GLIDE}"
+        const val GLIDE_OKHTTP_INTEGRATION =
+            "com.github.bumptech.glide:okhttp3-integration:${Versions.Others.GLIDE}"
         const val GSON = "com.google.code.gson:gson:${Versions.Others.GSON}"
         const val RETROFIT = "com.squareup.retrofit2:retrofit:${Versions.Others.RETROFIT}"
         const val CONVERTER_GSON =
@@ -85,6 +90,7 @@ object Dependencies {
     object JunitTest {
         const val JUNIT = "junit:junit:${Versions.JunitTest.JUNIT}"
         const val TRUTH = "com.google.truth:truth:${Versions.JunitTest.TRUTH}"
+        const val MOCK_CORE = "org.mockito:mockito-core:${Versions.JunitTest.MOCKITO_CORE}"
         const val LIFECYCLE = "androidx.arch.core:core-testing:${Versions.JunitTest.LIFECYCLE}"
     }
 
