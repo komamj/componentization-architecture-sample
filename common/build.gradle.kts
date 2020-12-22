@@ -28,7 +28,6 @@ android {
 addLifecycle(configurationName = "api")
 
 dependencies {
-    implementation(Dependencies.AndroidX.APPCOMPAT)
     api(project(":platform-image"))
     api(project(":platform-log"))
     api(project(":platform-router"))
@@ -36,6 +35,7 @@ dependencies {
     api(project(":platform-permission"))
     api(project(":platform-storage"))
     api(project(":platform-startup"))
+    api(project(":platform-theme"))
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)
