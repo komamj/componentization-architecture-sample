@@ -33,12 +33,10 @@ fun Project.addLifecycle(configurationName: String = IMPLEMENTATION) {
             configurationName,
             Dependencies.AndroidX.LIFECYCLE_PROCESS
         )
-    }
-}
-
-fun Project.addAppcompat(configurationName: String = IMPLEMENTATION) {
-    dependencies {
-        add(configurationName, Dependencies.AndroidX.APPCOMPAT)
+        add(
+            configurationName,
+            Dependencies.AndroidX.APPCOMPAT
+        )
     }
 }
 
