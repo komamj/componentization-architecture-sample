@@ -1,10 +1,8 @@
-import com.github.komamj.util.addLifecycle
 import com.github.komamj.dependency.Dependencies
 
 plugins {
     id("com.android.library")
     kotlin("android")
-    kotlin("kapt")
     id("com.github.komamj.common-configuration")
 }
 
@@ -13,31 +11,9 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
-
-    testOptions {
-        unitTests {
-            isIncludeAndroidResources = true
-        }
-    }
-
-    buildFeatures {
-        dataBinding = true
-    }
 }
 
-addLifecycle(configurationName = "api")
-
 dependencies {
-    api(project(":platform-image"))
-    api(project(":platform-log"))
-    api(project(":platform-router"))
-    api(project(":platform-network"))
-    api(project(":platform-permission"))
-    api(project(":platform-storage"))
-    api(project(":platform-statistics"))
-    api(project(":platform-startup"))
-    api(project(":platform-theme"))
-
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)
     androidTestImplementation(Dependencies.AndroidTest.JUNIT)
