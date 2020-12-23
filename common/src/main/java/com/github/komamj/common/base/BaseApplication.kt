@@ -21,6 +21,7 @@ import android.os.StrictMode
 import android.os.StrictMode.ThreadPolicy
 import android.os.StrictMode.VmPolicy
 import com.github.komamj.common.BuildConfig
+import com.github.komamj.log.Log
 
 open class BaseApplication : Application() {
     override fun onCreate() {
@@ -33,6 +34,8 @@ open class BaseApplication : Application() {
         if (BuildConfig.DEBUG) {
             enabledStrictMode()
         }
+
+        Log.init()
     }
 
     private fun enabledStrictMode() {
