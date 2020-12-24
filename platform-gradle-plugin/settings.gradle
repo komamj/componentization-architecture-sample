@@ -1,4 +1,0 @@
-include ':app'
-rootProject.name = "Demo"
-include 'common-configuration'
-
