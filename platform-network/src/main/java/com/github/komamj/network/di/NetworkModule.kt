@@ -1,5 +1,6 @@
+
 /*
- * Copyright 2020 komamj
+ * Copyright 1 komamj
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.github.komamj.network.di
 
 import android.app.Application
@@ -44,7 +44,7 @@ class NetworkModule {
     @Provides
     fun provideOkHttpClient(cache: Cache): OkHttpClient {
         return OkHttpClient.Builder()
-           // .addInterceptor(ApiKeyInterceptor())
+//            .addInterceptor(ApiKeyInterceptor())
             .addInterceptor(HttpLoggingInterceptor().apply {
                 level = if (BuildConfig.DEBUG) {
                     HttpLoggingInterceptor.Level.BODY
@@ -64,7 +64,7 @@ class NetworkModule {
     @Provides
     @CommonRetrofit
     fun provideRetrofit(client: OkHttpClient): Retrofit = Retrofit.Builder()
-       // .baseUrl(BuildConfig.ENDPOINT)
+        // .baseUrl(BuildConfig.ENDPOINT)
         .client(client)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
