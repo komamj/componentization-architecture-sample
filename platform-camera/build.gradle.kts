@@ -1,3 +1,4 @@
+import com.github.komamj.util.addLifecycle
 import com.github.komamj.dependency.Dependencies
 
 plugins {
@@ -24,11 +25,9 @@ android {
     }
 }
 
-dependencies {
-    api(Dependencies.AndroidX.ROOM_RUNTIME)
-    api(Dependencies.AndroidX.ROOM_KTX)
-    kapt(Dependencies.AndroidX.ROOM_COMPILER)
+addLifecycle(configurationName = "api")
 
+dependencies {
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)
     androidTestImplementation(Dependencies.AndroidTest.JUNIT)
