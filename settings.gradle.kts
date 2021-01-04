@@ -1,3 +1,4 @@
+include(":platform-web")
 include(":platform-camera")
 include(":platform-apm")
 include(":business-settings")
