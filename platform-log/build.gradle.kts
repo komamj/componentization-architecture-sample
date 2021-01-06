@@ -13,6 +13,12 @@ android {
     }
 }
 
+customConfiguration {
+    publication {
+
+    }
+}
+
 dependencies {
     api(Dependencies.Others.TIMBER)
 

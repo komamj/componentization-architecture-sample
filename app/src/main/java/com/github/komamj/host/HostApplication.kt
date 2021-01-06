@@ -1,4 +1,6 @@
 package com.github.komamj.host
 
-class HostApplication {
+import android.app.Application
+
+class HostApplication : Application() {
 }

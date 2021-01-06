@@ -28,6 +28,8 @@ dependencies {
     api(Dependencies.AndroidX.ROOM_RUNTIME)
     api(Dependencies.AndroidX.ROOM_KTX)
     kapt(Dependencies.AndroidX.ROOM_COMPILER)
+    implementation(Dependencies.AndroidX.SQLITE)
+    implementation(Dependencies.Others.SQLCIPHER)
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)

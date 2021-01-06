@@ -1,4 +1,5 @@
 import com.github.komamj.dependency.Dependencies
+import com.github.komamj.util.addLifecycle
 
 plugins {
     id("com.android.library")
@@ -13,9 +14,9 @@ android {
     }
 }
 
+addLifecycle()
 dependencies {
-    implementation(Dependencies.AndroidX.APPCOMPAT)
-    implementation(Dependencies.Others.PERMISSION)
+    api(Dependencies.Others.PERMISSION)
     implementation(project(":platform-log"))
 
     testImplementation(Dependencies.JunitTest.JUNIT)
