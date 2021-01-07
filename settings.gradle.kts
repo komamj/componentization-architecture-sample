@@ -1,3 +1,4 @@
+include(":business-api-home")
 include(":app")
 include(":business-settings")
 include(":business-people")

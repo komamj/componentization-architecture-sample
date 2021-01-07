@@ -1,4 +1,5 @@
 import com.github.komamj.dependency.Dependencies
+import com.github.komamj.util.addLifecycle
 
 plugins {
     id("com.android.library")
@@ -24,8 +25,8 @@ android {
     }
 }
 
+addLifecycle()
 dependencies {
-    implementation(Dependencies.AndroidX.APPCOMPAT)
     implementation(Dependencies.Others.GSON)
     api(Dependencies.Others.ROUTER)
     kapt(Dependencies.Others.ROUTER_COMPILER)

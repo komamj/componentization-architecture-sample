@@ -1,6 +1,11 @@
 package com.github.komamj.host
 
-import android.app.Application
+import com.github.komamj.common.base.BaseApplication
+import dagger.hilt.android.HiltAndroidApp
 
-class HostApplication : Application() {
+@HiltAndroidApp
+class HostApplication : BaseApplication() {
+    override fun onCreate() {
+        super.onCreate()
+    }
 }

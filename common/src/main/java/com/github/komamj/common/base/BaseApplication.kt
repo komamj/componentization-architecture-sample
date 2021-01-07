@@ -19,8 +19,9 @@ import android.app.Application
 import android.os.StrictMode
 import android.os.StrictMode.ThreadPolicy
 import android.os.StrictMode.VmPolicy
+import com.alibaba.android.arouter.launcher.ARouter
 import com.github.komamj.common.BuildConfig
-import com.github.komamj.log.Log
+import com.github.komamj.platform.log.Log
 
 open class BaseApplication : Application() {
     override fun onCreate() {
@@ -30,10 +31,26 @@ open class BaseApplication : Application() {
     }
 
     private fun init() {
+        initStrictMode()
+        initLog()
+        initRouter()
+    }
+
+    private fun initStrictMode() {
         if (BuildConfig.DEBUG) {
             enabledStrictMode()
         }
+    }
 
+    private fun initRouter() {
+        if (BuildConfig.DEBUG) {
+            ARouter.openDebug()
+            ARouter.printStackTrace()
+        }
+        ARouter.init(this)
+    }
+
+    private fun initLog() {
         Log.init()
     }
 
