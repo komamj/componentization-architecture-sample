@@ -15,7 +15,7 @@ android {
     defaultConfig {
         applicationId = "com.github.komamj.host"
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
     }
 
     buildFeatures.dataBinding = true

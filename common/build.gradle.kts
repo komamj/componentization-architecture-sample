@@ -26,7 +26,6 @@ android {
 }
 
 addLifecycle(configurationName = "api")
-
 dependencies {
     api(project(":platform-image"))
     api(project(":platform-log"))

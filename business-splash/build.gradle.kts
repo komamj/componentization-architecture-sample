@@ -1,6 +1,7 @@
 import com.github.komamj.dependency.Dependencies
 import com.github.komamj.util.addDaggerHilt
 import com.github.komamj.util.addHiltAndroidX
+import com.github.komamj.util.addLifecycle
 
 plugins {
     id("com.android.library")
@@ -23,10 +24,12 @@ android {
 
 addDaggerHilt()
 addHiltAndroidX()
-
+addLifecycle()
 dependencies {
-    implementation(project(":common"))
     implementation(Dependencies.AndroidX.CONSTRAINT_LAYOUT)
+
+    implementation(project(":common"))
+    implementation(project(":business-home-api"))
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)

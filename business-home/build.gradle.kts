@@ -1,23 +1,36 @@
 import com.github.komamj.dependency.Dependencies
+import com.github.komamj.util.addDaggerHilt
+import com.github.komamj.util.addHiltAndroidX
+import com.github.komamj.util.addLifecycle
 
 plugins {
     id("com.android.library")
     kotlin("android")
     kotlin("kapt")
     id("com.github.komamj.common-configuration")
+    id("com.alibaba.arouter")
 }
 
 android {
     defaultConfig {
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
+
+        resourcePrefix = "home_"
     }
 
     buildFeatures.dataBinding = true
 }
 
+addDaggerHilt()
+addHiltAndroidX()
+addLifecycle()
 dependencies {
     implementation(project(":common"))
+    api(project(":business-home-api"))
+    implementation(project(":business-movie-api"))
+    implementation(project(":business-tv-api"))
+    implementation(project(":business-people-api"))
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)
