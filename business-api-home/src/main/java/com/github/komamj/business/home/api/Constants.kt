@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 komamj
+ * Copyright 2020 komamj
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,15 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.komamj.platform.web.util
 
-import android.net.Uri
+package com.github.komamj.business.home.api
 
-fun String.clearQueryAndFragment(): String = let {
-    val originUri = Uri.parse(this).buildUpon().build()
-    val newUri = Uri.Builder()
-        .scheme(originUri.scheme)
-        .encodedAuthority(originUri.encodedAuthority)
-        .encodedPath(originUri.encodedPath)
-    newUri.build().toString()
-}
+const val PATH_HOME_ACTIVITY = "/home/main"

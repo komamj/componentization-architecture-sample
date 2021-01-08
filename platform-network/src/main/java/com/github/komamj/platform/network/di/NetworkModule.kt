@@ -16,7 +16,7 @@
 package com.github.komamj.platform.network.di
 
 import android.app.Application
-import com.github.komamj.platform.BuildConfig
+import com.github.komamj.platform.network.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

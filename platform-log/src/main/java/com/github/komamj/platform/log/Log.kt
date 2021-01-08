@@ -15,7 +15,6 @@
  */
 package com.github.komamj.platform.log
 
-import com.github.komamj.platform.BuildConfig
 import timber.log.Timber
 
 object Log {

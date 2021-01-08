@@ -20,7 +20,7 @@ import android.graphics.drawable.ColorDrawable
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.github.komamj.platform.GlideApp
+import com.github.komamj.platform.image.GlideApp
 
 @BindingAdapter(value = ["imageUrl"])
 fun bindImageUrl(view: ImageView, url: String?) {
