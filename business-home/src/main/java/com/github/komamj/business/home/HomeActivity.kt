@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 komamj
+ * Copyright 2021 komamj
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,16 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.github.komamj.business.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.github.komamj.business.home.api.PATH_HOME_ACTIVITY
 import com.github.komamj.business.home.databinding.HomeActivityHomeBinding
+import com.github.komamj.business.movie.api.util.PATH_MOVIE_MAIN_PAGE
 import com.github.komamj.common.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,9 +35,12 @@ class HomeActivity : BaseActivity<HomeActivityHomeBinding>() {
 
     private val fragmentsHolder: Map<String, Fragment> by lazy {
         mapOf(
-            /*TAG_MOVIE to Router.build(PATH_MOVIE_MAIN_PAGE).navigation(this) as Fragment,
-            TAG_TV to movieService.provideMovieFragment(),
-            TAG_PEOPLE to movieService.provideMovieFragment()*/
+            TAG_MOVIE to ARouter.getInstance().build(PATH_MOVIE_MAIN_PAGE)
+                .navigation(this) as Fragment,
+            TAG_TV to ARouter.getInstance().build(PATH_MOVIE_MAIN_PAGE)
+                .navigation(this) as Fragment,
+            TAG_PEOPLE to ARouter.getInstance().build(PATH_MOVIE_MAIN_PAGE)
+                .navigation(this) as Fragment
         )
     }
 

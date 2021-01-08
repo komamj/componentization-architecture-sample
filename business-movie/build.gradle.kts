@@ -13,7 +13,7 @@ plugins {
 android {
     defaultConfig {
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
     }
 
     buildFeatures.dataBinding = true
@@ -26,6 +26,7 @@ dependencies {
     implementation(Dependencies.AndroidX.CONSTRAINT_LAYOUT)
 
     implementation(project(":common"))
+    api(project(":business-movie-api"))
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)

@@ -11,7 +11,7 @@ plugins {
 android {
     defaultConfig {
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
     }
 
     testOptions {
@@ -31,6 +31,7 @@ dependencies {
     api(project(":platform-log"))
     api(project(":platform-router"))
     api(project(":platform-network"))
+    api(project(":platform-database"))
     api(project(":platform-permission"))
     api(project(":platform-storage"))
     api(project(":platform-statistics"))
