@@ -44,5 +44,10 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     implementation(project(":business-splash"))
+    implementation(project(":business-home"))
+    implementation(project(":business-people"))
+    implementation(project(":business-tv"))
+    implementation(project(":business-mine"))
+    implementation(project(":business-settings"))
     implementation(project(":common"))
 }

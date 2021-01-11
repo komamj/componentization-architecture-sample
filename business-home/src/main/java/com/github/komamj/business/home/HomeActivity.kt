@@ -19,27 +19,29 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
-import com.github.komamj.business.home.api.PATH_HOME_ACTIVITY
+import com.github.komamj.business.home.api.util.PATH_HOME_ACTIVITY
 import com.github.komamj.business.home.databinding.HomeActivityHomeBinding
 import com.github.komamj.business.movie.api.util.PATH_MOVIE_MAIN_PAGE
+import com.github.komamj.business.people.api.util.PATH_PEOPLE_MAIN_PAGE
+import com.github.komamj.business.settings.api.util.PATH_SETTINGS_MAIN_PAGE
+import com.github.komamj.business.tv.api.util.PATH_TV_MAIN_PAGE
 import com.github.komamj.common.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 @Route(path = PATH_HOME_ACTIVITY)
 class HomeActivity : BaseActivity<HomeActivityHomeBinding>() {
-    /*@Autowired
-    lateinit var movieService: MovieService*/
-
     private var currentTag = TAG_MOVIE
 
     private val fragmentsHolder: Map<String, Fragment> by lazy {
         mapOf(
             TAG_MOVIE to ARouter.getInstance().build(PATH_MOVIE_MAIN_PAGE)
                 .navigation(this) as Fragment,
-            TAG_TV to ARouter.getInstance().build(PATH_MOVIE_MAIN_PAGE)
+            TAG_TV to ARouter.getInstance().build(PATH_TV_MAIN_PAGE)
                 .navigation(this) as Fragment,
-            TAG_PEOPLE to ARouter.getInstance().build(PATH_MOVIE_MAIN_PAGE)
+            TAG_PEOPLE to ARouter.getInstance().build(PATH_PEOPLE_MAIN_PAGE)
+                .navigation(this) as Fragment,
+            TAG_SETTINGS to ARouter.getInstance().build(PATH_SETTINGS_MAIN_PAGE)
                 .navigation(this) as Fragment
         )
     }
@@ -107,5 +109,6 @@ class HomeActivity : BaseActivity<HomeActivityHomeBinding>() {
         private const val TAG_MOVIE = "tag_movie"
         private const val TAG_TV = "tag_tv"
         private const val TAG_PEOPLE = "tag_people"
+        private const val TAG_SETTINGS = "tag_settings"
     }
 }

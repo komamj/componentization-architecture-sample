@@ -14,6 +14,8 @@ android {
     defaultConfig {
         versionCode = 1
         versionName = "1.0.0"
+
+        resourcePrefix = "movie_"
     }
 
     buildFeatures.dataBinding = true

@@ -21,6 +21,7 @@ import androidx.databinding.DataBindingUtil
 import com.alibaba.android.arouter.facade.Postcard
 import com.alibaba.android.arouter.facade.callback.NavCallback
 import com.alibaba.android.arouter.launcher.ARouter
+import com.github.komamj.business.home.api.util.PATH_HOME_ACTIVITY
 import com.github.komamj.business.splash.databinding.SplashActivitySplashBinding
 import com.github.komamj.platform.permission.RequestPermissionActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -54,7 +55,7 @@ class SplashActivity : RequestPermissionActivity() {
     @AfterPermissionGranted(PERMISSION_REQUEST_CODE)
     private fun launchMainPage() {
         if (isPermissionGranted()) {
-            ARouter.getInstance().build("")
+            ARouter.getInstance().build(PATH_HOME_ACTIVITY)
                 .withTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                 .navigation(this, object : NavCallback() {
                     override fun onArrival(postcard: Postcard?) {

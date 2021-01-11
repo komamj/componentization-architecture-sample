@@ -13,6 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.komamj.business.home.api
+package com.github.komamj.business.home.api.util
 
 const val PATH_HOME_ACTIVITY = "/home/main"
