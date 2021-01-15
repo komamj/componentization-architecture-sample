@@ -1,4 +1,3 @@
-import com.github.komamj.dependency.Dependencies
 import com.github.komamj.util.addDaggerHilt
 import com.github.komamj.util.addHiltAndroidX
 import com.github.komamj.util.addLifecycle

@@ -21,9 +21,9 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.github.komamj.business.home.api.util.PATH_HOME_ACTIVITY
 import com.github.komamj.business.home.databinding.HomeActivityHomeBinding
+import com.github.komamj.business.mine.api.util.PATH_MINE_MAIN_PAGE
 import com.github.komamj.business.movie.api.util.PATH_MOVIE_MAIN_PAGE
 import com.github.komamj.business.people.api.util.PATH_PEOPLE_MAIN_PAGE
-import com.github.komamj.business.settings.api.util.PATH_SETTINGS_MAIN_PAGE
 import com.github.komamj.business.tv.api.util.PATH_TV_MAIN_PAGE
 import com.github.komamj.common.base.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -41,7 +41,7 @@ class HomeActivity : BaseActivity<HomeActivityHomeBinding>() {
                 .navigation(this) as Fragment,
             TAG_PEOPLE to ARouter.getInstance().build(PATH_PEOPLE_MAIN_PAGE)
                 .navigation(this) as Fragment,
-            TAG_SETTINGS to ARouter.getInstance().build(PATH_SETTINGS_MAIN_PAGE)
+            TAG_MINE to ARouter.getInstance().build(PATH_MINE_MAIN_PAGE)
                 .navigation(this) as Fragment
         )
     }
@@ -109,6 +109,6 @@ class HomeActivity : BaseActivity<HomeActivityHomeBinding>() {
         private const val TAG_MOVIE = "tag_movie"
         private const val TAG_TV = "tag_tv"
         private const val TAG_PEOPLE = "tag_people"
-        private const val TAG_SETTINGS = "tag_settings"
+        private const val TAG_MINE = "tag_mine"
     }
 }

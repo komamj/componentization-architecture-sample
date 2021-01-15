@@ -9,6 +9,7 @@ plugins {
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
     id("com.github.komamj.common-configuration")
+    id("com.alibaba.arouter")
 }
 
 android {

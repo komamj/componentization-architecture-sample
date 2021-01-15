@@ -1,10 +1,15 @@
 import com.github.komamj.dependency.Dependencies
+import com.github.komamj.util.addDaggerHilt
+import com.github.komamj.util.addHiltAndroidX
+import com.github.komamj.util.addLifecycle
 
 plugins {
     id("com.android.library")
     kotlin("android")
     kotlin("kapt")
+    id("dagger.hilt.android.plugin")
     id("com.github.komamj.common-configuration")
+    id("com.alibaba.arouter")
 }
 
 android {
@@ -18,6 +23,9 @@ android {
     buildFeatures.dataBinding = true
 }
 
+addDaggerHilt()
+addHiltAndroidX()
+addLifecycle()
 dependencies {
     implementation(Dependencies.AndroidX.CONSTRAINT_LAYOUT)
 
