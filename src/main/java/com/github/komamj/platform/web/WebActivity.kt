@@ -18,7 +18,7 @@ package com.github.komamj.platform.web
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class WebActivity : AppCompatActivity(), WebContainer {
+class WebActivity : AppCompatActivity(R.layout.web_activity_web) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

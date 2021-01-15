@@ -15,4 +15,6 @@
  */
 package com.github.komamj.platform.web
 
-interface WebContainer
+interface WebContainer {
+    fun launchWebPage(url: String)
+}
