@@ -32,7 +32,7 @@ class DebugTree : Timber.DebugTree() {
     }
 
     companion object {
-        private const val LOG_TAG = "KomaLog"
+        private const val LOG_TAG = "PlatformLog"
         private const val SEPARATOR = "----"
     }
 }

@@ -15,14 +15,32 @@
  */
 package com.github.komamj.platform.log
 
+import android.app.Application
 import timber.log.Timber
 
-object Log {
-    fun init() {
+object PlatformLog {
+    private lateinit var application: Application
+
+    @Volatile
+    var logger: Logger? = null
+
+    @JvmStatic
+    fun init(application: Application) {
+        this.application = application
+
         if (BuildConfig.DEBUG) {
             Timber.plant(DebugTree())
         } else {
             Timber.plant(ReleaseTree())
         }
+    }
+
+    /**
+     * @see Logger.d
+     */
+    inline fun d(message: () -> String) {
+        // Local variable to prevent the ref from becoming null after the null check.
+        val logger = logger ?: return
+        logger.d(message.invoke())
     }
 }

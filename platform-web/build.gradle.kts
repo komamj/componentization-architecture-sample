@@ -25,10 +25,14 @@ android {
     }
 }
 
-addLifecycle(configurationName = "api")
+addLifecycle()
 
 dependencies {
+    implementation(Dependencies.AndroidX.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.AndroidX.FRAGMENT)
     implementation(Dependencies.AndroidX.WEBKIT)
+
+    implementation(project(":platform-log"))
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)

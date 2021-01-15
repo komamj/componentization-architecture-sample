@@ -13,8 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.komamj.platform.web
+package com.github.komamj.platform.log
 
-interface WebContainer {
-    fun launchWebPage(url: String)
+interface Logger {
+    /**
+     * Logs a debug message formatted with the passed in arguments.
+     */
+    fun d(message: String)
+
+    /**
+     * Logs a [Throwable] and debug message formatted with the passed in arguments.
+     */
+    fun e(
+        throwable: Throwable,
+        message: String
+    )
 }

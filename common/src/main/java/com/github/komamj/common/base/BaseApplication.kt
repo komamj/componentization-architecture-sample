@@ -21,7 +21,7 @@ import android.os.StrictMode.ThreadPolicy
 import android.os.StrictMode.VmPolicy
 import com.alibaba.android.arouter.launcher.ARouter
 import com.github.komamj.common.BuildConfig
-import com.github.komamj.platform.log.Log
+import com.github.komamj.platform.log.PlatformLog
 
 open class BaseApplication : Application() {
     override fun onCreate() {
@@ -51,7 +51,11 @@ open class BaseApplication : Application() {
     }
 
     private fun initLog() {
-        Log.init()
+        PlatformLog.init(this)
+
+        PlatformLog.d {
+            ""
+        }
     }
 
     private fun enabledStrictMode() {

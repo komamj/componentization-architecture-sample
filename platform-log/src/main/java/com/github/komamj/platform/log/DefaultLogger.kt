@@ -13,8 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.komamj.platform.web
+package com.github.komamj.platform.log
 
-interface WebContainer {
-    fun launchWebPage(url: String)
+class DefaultLogger : Logger {
+    override fun d(message: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun e(throwable: Throwable, message: String) {
+        TODO("Not yet implemented")
+    }
 }

@@ -3,4 +3,13 @@
     package="com.github.komamj.platform.web">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity
+            android:name=".WebActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:process=":web"
+            android:screenOrientation="portrait" />
+    </application>
 </manifest>
