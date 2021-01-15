@@ -18,7 +18,6 @@ package com.github.komamj.business.movie.data.source.local
 import com.github.komamj.business.movie.data.entities.Movie
 import com.github.komamj.business.movie.data.source.MovieDataSource
 import com.github.komamj.common.data.entities.Resource
-import com.koma.database.data.source.local.MovieDao
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

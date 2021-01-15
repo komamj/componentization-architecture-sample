@@ -27,6 +27,9 @@ addDaggerHilt()
 addHiltAndroidX()
 addLifecycle()
 dependencies {
+    implementation(Dependencies.AndroidX.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.AndroidX.FRAGMENT)
+
     implementation(project(":common"))
     api(project(":business-home-api"))
     implementation(project(":business-movie-api"))

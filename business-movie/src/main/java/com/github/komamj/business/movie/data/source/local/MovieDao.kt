@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.koma.database.data.source.local
+package com.github.komamj.business.movie.data.source.local
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.koma.database.data.entities.Movie
+import com.github.komamj.business.movie.data.entities.Movie
 
 @Dao
 interface MovieDao {

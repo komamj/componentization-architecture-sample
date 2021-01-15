@@ -18,7 +18,6 @@ package com.github.komamj.business.movie.data.source.local
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.github.komamj.business.movie.data.entities.Movie
-import com.koma.database.data.source.local.MovieDao
 
 @Database(entities = [Movie::class], version = 1, exportSchema = true)
 abstract class MovieDatabase : RoomDatabase() {
