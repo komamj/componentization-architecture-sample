@@ -18,11 +18,21 @@ package com.github.komamj.platform.web.util
 import android.webkit.WebView
 
 private const val JAVASCRIPT = "javascript:"
+private const val NATIVE_CALLBACK = "__NativeCallback"
 
 fun WebView.evaluateJs(script: String, resultCallback: (String) -> Unit?) {
     post {
         evaluateJavascript("$JAVASCRIPT$script") {
             resultCallback(it)
         }
+    }
+}
+
+/**
+ * native 调用 js
+ */
+fun WebView.callJs(json: String?, resultCallback: (String) -> Unit?) {
+    evaluateJs("$NATIVE_CALLBACK('$json')") {
+        resultCallback(it)
     }
 }

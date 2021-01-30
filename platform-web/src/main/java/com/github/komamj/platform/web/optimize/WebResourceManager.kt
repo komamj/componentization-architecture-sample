@@ -15,10 +15,12 @@
  */
 package com.github.komamj.platform.web.optimize
 
+import androidx.annotation.RestrictTo
 import com.github.komamj.platform.web.util.clearQueryAndFragment
 import java.io.File
 import java.net.URL
 
+@RestrictTo(RestrictTo.Scope.LIBRARY)
 class WebResourceManager {
     fun intercept(url: String) {
     }

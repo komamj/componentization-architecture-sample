@@ -24,9 +24,12 @@ import android.os.Bundle
 import android.os.Looper
 import android.webkit.WebSettings
 import android.webkit.WebView
+import androidx.annotation.RestrictTo
 import java.util.Stack
 import kotlin.text.Charsets.UTF_8
+import timber.log.Timber
 
+@RestrictTo(RestrictTo.Scope.LIBRARY)
 object WebViewPool {
     private const val DEFAULT_POOL_SIZE = 3
 
@@ -70,6 +73,7 @@ object WebViewPool {
     }
 
     private fun preload() {
+        Timber.d("preload")
         Looper.myQueue().addIdleHandler {
             if (cachedWebView.size < poolSize) {
                 cachedWebView.push(createWebView(application))
@@ -89,8 +93,8 @@ object WebViewPool {
                 allowFileAccess = true
                 loadsImagesAutomatically = false
                 defaultTextEncodingName = UTF_8.toString()
-                useWideViewPort = true
-                loadWithOverviewMode = true
+                useWideViewPort = true // 将图片调整到适合webview的大小
+                loadWithOverviewMode = true // 缩放至屏幕的大小
                 setSupportZoom(false)
                 displayZoomControls = false
                 cacheMode = WebSettings.LOAD_DEFAULT

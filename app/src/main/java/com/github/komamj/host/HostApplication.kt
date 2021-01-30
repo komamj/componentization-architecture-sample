@@ -16,6 +16,7 @@
 package com.github.komamj.host
 
 import com.github.komamj.common.base.BaseApplication
+import com.github.komamj.common.util.ProcessUtils
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
@@ -23,4 +24,6 @@ class HostApplication : BaseApplication() {
     override fun onCreate() {
         super.onCreate()
     }
+
+    private fun isMainProcess() = ProcessUtils.getCurrentProcessName() == BuildConfig.APPLICATION_ID
 }

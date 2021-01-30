@@ -15,15 +15,4 @@
  */
 package com.github.komamj.platform.web.util
 
-import android.net.Uri
-import androidx.annotation.RestrictTo
-
-@RestrictTo(RestrictTo.Scope.LIBRARY)
-fun String.clearQueryAndFragment(): String = let {
-    val originUri = Uri.parse(this).buildUpon().build()
-    val newUri = Uri.Builder()
-        .scheme(originUri.scheme)
-        .encodedAuthority(originUri.encodedAuthority)
-        .encodedPath(originUri.encodedPath)
-    newUri.build().toString()
-}
+const val PATH_WEB_CONTAINER_SERVICE = "/web/service"

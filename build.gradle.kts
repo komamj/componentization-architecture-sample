@@ -7,7 +7,7 @@ buildscript {
         }*/
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.1.1")
+        classpath("com.android.tools.build:gradle:4.1.2")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21")
         classpath("com.alibaba:arouter-register:1.0.2")
         classpath("com.google.dagger:hilt-android-gradle-plugin:2.28.3-alpha")
@@ -29,9 +29,9 @@ tasks.register("clean", Delete::class) {
     delete(rootProject.buildDir)
 }
 
-task<Exec>(name = "initGitHooks") {
+/*task<Exec>(name = "initGitHooks") {
     commandLine("sh", "-c", "git config core.hooksPath .githooks")
-}
+}*/
 
 afterEvaluate {
     tasks.getByPath(":app:preBuild").dependsOn(":initGitHooks")

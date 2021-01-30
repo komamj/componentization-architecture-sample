@@ -29,7 +29,7 @@ import com.github.komamj.platform.web.api.AndroidJs
 import com.github.komamj.platform.web.databinding.WebFragmentWebBinding
 import com.github.komamj.platform.web.optimize.WebViewPool
 
-class WebFragment : Fragment(R.layout.web_fragment_web) {
+class WebFragment : Fragment() {
     private lateinit var binding: WebFragmentWebBinding
 
     private lateinit var webView: WebView

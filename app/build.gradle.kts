@@ -36,6 +36,12 @@ android {
     }
 }
 
+tasks.register("installHooks") {
+    project.exec {
+        commandLine("./../scripts/install-hooks.sh")
+    }
+}
+
 addDaggerHilt()
 addHiltAndroidX()
 addLifecycle()

@@ -13,8 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.komamj.platform.web
+package com.github.komamj.platform.web.api
 
-interface WebContainer {
-    fun launchWebPage(url: String)
+import android.content.Context
+import com.alibaba.android.arouter.facade.template.IProvider
+
+interface WebContainer : IProvider {
+    fun launchWebPage(context: Context, url: String)
 }

@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.komamj.platform.web.optimize
+package com.github.komamj.platform.web
 
-import android.webkit.WebResourceRequest
-import android.webkit.WebResourceResponse
-import android.webkit.WebView
-import androidx.annotation.RequiresApi
+import android.app.Application
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
 import androidx.annotation.RestrictTo
-import androidx.webkit.WebViewClientCompat
+import com.github.komamj.platform.web.optimize.WebViewPool
+import timber.log.Timber
 
 @RestrictTo(RestrictTo.Scope.LIBRARY)
-class CustomWebViewClient : WebViewClientCompat() {
-    override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
-        return false
-    }
+class WebReceiver : BroadcastReceiver() {
+    override fun onReceive(context: Context, intent: Intent) {
+        Timber.d("onReceive")
 
-    @RequiresApi(21)
-    override fun shouldInterceptRequest(
-        view: WebView?,
-        request: WebResourceRequest?
-    ): WebResourceResponse? {
-        return super.shouldInterceptRequest(
-            view,
-            request
-        )
+        WebViewPool.init(context.applicationContext as Application)
     }
 }

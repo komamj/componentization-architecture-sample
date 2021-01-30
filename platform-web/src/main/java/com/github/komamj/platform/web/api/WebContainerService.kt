@@ -13,29 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.komamj.platform.web.optimize
+package com.github.komamj.platform.web.api
 
-import android.webkit.WebResourceRequest
-import android.webkit.WebResourceResponse
-import android.webkit.WebView
-import androidx.annotation.RequiresApi
+import android.content.Context
+import android.content.Intent
 import androidx.annotation.RestrictTo
-import androidx.webkit.WebViewClientCompat
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.github.komamj.platform.web.WebActivity
+import com.github.komamj.platform.web.util.PATH_WEB_CONTAINER_SERVICE
 
 @RestrictTo(RestrictTo.Scope.LIBRARY)
-class CustomWebViewClient : WebViewClientCompat() {
-    override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
-        return false
+@Route(path = PATH_WEB_CONTAINER_SERVICE)
+class WebContainerService : WebContainer {
+    private lateinit var applicationContext: Context
+
+    override fun init(context: Context) {
+        this.applicationContext = context
     }
 
-    @RequiresApi(21)
-    override fun shouldInterceptRequest(
-        view: WebView?,
-        request: WebResourceRequest?
-    ): WebResourceResponse? {
-        return super.shouldInterceptRequest(
-            view,
-            request
-        )
+    override fun launchWebPage(context: Context, url: String) {
+        context.startActivity(Intent(context, WebActivity::class.java))
     }
 }

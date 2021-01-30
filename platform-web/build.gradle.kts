@@ -6,6 +6,7 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     id("com.github.komamj.common-configuration")
+    id("kotlin-android")
 }
 
 android {
@@ -33,6 +34,7 @@ dependencies {
     implementation(Dependencies.AndroidX.WEBKIT)
 
     implementation(project(":platform-log"))
+    implementation(project(":platform-router"))
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)

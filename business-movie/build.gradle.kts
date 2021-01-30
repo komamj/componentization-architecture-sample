@@ -28,6 +28,7 @@ addHiltAndroidX()
 addLifecycle()
 dependencies {
     implementation(Dependencies.AndroidX.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.AndroidX.PAGING_RUNTIME)
 
     implementation(project(":common"))
     api(project(":business-movie-api"))
