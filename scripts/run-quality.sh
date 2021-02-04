@@ -1,12 +1,19 @@
 #!/usr/bin/env bash
 
-echo "Running tests..."
-./gradlew clean && ./gradlew lint && ./gradlew spotlessCheck && ./gradlew test && ./gradlew build
-status=$?
-if [ "$status" = 0 ]; then
-  echo "Code check successful!"
-  exit 0
-else
-  echo "Code check failed!"
-  exit 1
-fi
+checkResult() {
+  if ! $1; then
+    echo "$1 execute failed!"
+    exit 1
+  fi
+}
+
+echo "Code check start..."
+checkResult "./gradlew clean"
+echo "Running lint..."
+checkResult "./gradlew lint"
+echo "Running spotlessCheck..."
+checkResult "./gradlew spotlessCheck"
+echo "Running test..."
+checkResult "./gradlew test"
+echo "Running build..."
+checkResult "./gradlew build"

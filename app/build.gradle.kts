@@ -36,10 +36,12 @@ android {
     }
 }
 
-tasks.register("installHooks") {
-    project.exec {
-        commandLine("./../scripts/install-hooks.sh")
-    }
+tasks.register<Exec>("installHooks") {
+    commandLine("sh", "../scripts/install-hooks.sh")
+}
+
+afterEvaluate {
+    tasks.getByName("clean").dependsOn("installHooks")
 }
 
 addDaggerHilt()
