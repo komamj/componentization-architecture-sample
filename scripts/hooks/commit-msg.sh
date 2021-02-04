@@ -1,33 +1,39 @@
 #!/usr/bin/env bash
 
 # regex to validate in commit msg
-commit_regex="((chore|docs|feat|fix|refactor|style|test|build|ci|revert|pref)\:)+|merge)"
-#commit_regex="/^(chore|docs|feat|fix|refactor|style|test|build|ci|revert|pref)\: \[([A-z0-9\s&])|(([A-z0-9\s&]+)-([A-z0-9\s&]))+\] #((\d+)|(N\/A)) [\sA-z0-9\-\.,_\"]+$/"
-error_msg="Aborting commit. Your commit message must begin with one of the following"
+commit_regex="(^(chore|docs|feat|fix|refactor|style|test|build|ci|revert|pref)\:) \[([A-z0-9_-]+)+\] \#((\d+)|(N\/A)) +"
+error_msg="Aborting commit. Your commit message format invalid.Please follow the format as follows:"
 
 if ! grep -iqE "$commit_regex" "$1"; then
-  echo "$error_msg" >&2
+  echo "Aborting commit. Your commit message format invalid.Please follow the format as follows:"
+  echo "chore|docs|feat|fix|refactor|style|test|build|ci|revert|pref: [module name] #jira_issue_code your_commit_message."
+  echo "Verb list:"
+  echo "------------------------------------------------------------------------------------"
+  echo "feat:new feature for the user, not a new feature for build script"
+  echo "------------------------------------------------------------------------------------"
+  echo "fix:bug fix for the user, not a fix to a build script"
+  echo "------------------------------------------------------------------------------------"
+  echo "refactor:refactoring production code e.g. renaming a variable"
+  echo "------------------------------------------------------------------------------------"
+  echo "test:adding missing tests, refactoring tests, no production code change"
+  echo "------------------------------------------------------------------------------------"
+  echo "chore:other changes that don't modify src or test files"
+  echo "------------------------------------------------------------------------------------"
+  echo "style:changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)"
+  echo "------------------------------------------------------------------------------------"
+  echo "docs:changes to the documentation, comment etc."
+  echo "------------------------------------------------------------------------------------"
+  echo "pref:a code change that improves performance"
+  echo "------------------------------------------------------------------------------------"
+  echo "build:changes that affect the build system or external dependencies"
+  echo "------------------------------------------------------------------------------------"
+  echo "ci:changes to our CI configuration files and scripts"
+  echo "------------------------------------------------------------------------------------"
+  echo "revert:reverts a previous commit"
+  echo "------------------------------------------------------------------------------------"
   exit 1
 fi
 
-#COMMIT_FORMAT_POLICY_TAG = "[COMMIT_FORMAT_POLICY] ERROR::"
-#COMMIT_ERROR_BANNER = "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-#COMMIT_FORMAT_REGEX = "/^(chore|docs|feat|fix|refactor|style|test|build|ci|revert|pref)\: \[([A-z0-9\s&])|(([A-z0-9\s&]+)-([A-z0-9\s&]))+\] #((\d+)|((CAF[A-z0-9\s&]+)-\d+)|(N\/A)) [\sA-z0-9\-\.,_\"]+$/"
-#
-#message_file = ARGV[0]
-#message = File.read(message_file)
-#
-#if message.include? "This reverts commit"
-#  exit 0
-#end
-#
-#if message.include? "It looks like you may be committing a cherry-pick"
-#  exit 0
-#end
-#
-#if message.start_with? "Merge"
-#  exit 0
-#end
 #
 #if !$COMMIT_FORMAT_REGEX.match(message)
 #  puts COMMIT_ERROR_BANNER
