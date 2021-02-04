@@ -19,6 +19,10 @@ android {
 
     buildFeatures.dataBinding = true
 
+    signingConfigs {
+
+    }
+
     buildTypes {
         getByName("debug") {
             isMinifyEnabled = false

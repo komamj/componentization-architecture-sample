@@ -8,7 +8,6 @@ checkResult() {
 }
 
 echo "Code check start..."
-checkResult "./gradlew clean"
 echo "Running lint..."
 checkResult "./gradlew lint"
 echo "Running spotlessCheck..."

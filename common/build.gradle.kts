@@ -36,7 +36,7 @@ dependencies {
     api(project(":platform-storage"))
     api(project(":platform-statistics"))
     api(project(":platform-startup"))
-    api(project(":platform-theme"))
+    api(project(":platform-ui"))
 
     testImplementation(Dependencies.JunitTest.JUNIT)
     testImplementation(Dependencies.JunitTest.TRUTH)

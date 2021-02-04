@@ -17,7 +17,7 @@ android {
         versionCode = 1
         versionName = "1.0.0"
 
-        resourcePrefix = "mine_"
+        resourcePrefix = "settings_"
     }
 
     buildFeatures.dataBinding = true
