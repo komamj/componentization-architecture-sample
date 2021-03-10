@@ -13,10 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.komamj.platform.usecase
+package com.komamj.platform.domain.model
 
 import androidx.lifecycle.MutableLiveData
 
+/**
+ * A generic class that holds a value with its loading status.
+ * @param <T>
+ */
 sealed class Result<out R> {
     data class Success<out T>(val data: T) : Result<T>()
     data class Error(val exception: Exception) : Result<Nothing>()

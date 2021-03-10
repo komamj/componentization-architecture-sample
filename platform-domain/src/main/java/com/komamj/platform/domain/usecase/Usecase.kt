@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.komamj.platform.usecase
+package com.komamj.platform.domain.usecase
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
+import com.komamj.platform.domain.model.Result
 
 /**
  * Executes business logic synchronously or asynchronously using Coroutines.
