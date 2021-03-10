@@ -15,11 +15,11 @@
  */
 package com.komamj.platform.domain.usecase
 
+import com.komamj.platform.domain.model.Result
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
-import com.komamj.platform.domain.model.Result
 
 /**
  * Executes business logic in its execute method and keep posting updates to the result as

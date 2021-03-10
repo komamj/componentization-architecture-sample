@@ -15,9 +15,9 @@
  */
 package com.komamj.platform.domain.usecase
 
+import com.komamj.platform.domain.model.Result
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
-import com.komamj.platform.domain.model.Result
 
 /**
  * Executes business logic synchronously or asynchronously using Coroutines.
