@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.github.komamj.platform">
+    package="com.komamj.platform.startup">
 
     <application>
         <provider
@@ -10,7 +10,7 @@
             android:exported="false"
             tools:node="merge">
             <meta-data
-                android:name="com.github.komamj.platform.startup.DiscoveredWithDependencyInitializer"
+                android:name="com.komamj.platform.startup.DiscoveredWithDependencyInitializer"
                 android:value="androidx.startup" />
         </provider>
     </application>

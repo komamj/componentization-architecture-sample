@@ -7,7 +7,7 @@
 
         <variable
             name="movie"
-            type="com.github.komamj.business.movie.data.entities.Movie" />
+            type="com.komamj.business.movie.data.entities.Movie" />
 
         <variable
             name="clickListener"

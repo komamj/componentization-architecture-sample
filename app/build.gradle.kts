@@ -12,7 +12,7 @@ plugins {
 
 android {
     defaultConfig {
-        applicationId = "com.github.komamj.host"
+        applicationId = "com.komamj.host"
         versionCode = 1
         versionName = "1.0.0"
     }
